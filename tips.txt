@@ -1,0 +1,2 @@
+In /usr/share/wayland-sessions/sway change Exec= to "dbus-run-session sway", so with i3
+sudo xbps-install -S rofi dmenu wl-clipboard cliphist wofi picom i3 i3status sway lxterminal clipmenu Waybar polybar

@@ -1,0 +1,6 @@
+Super+D rofi -show drun
+Print flameshot gui
+Super+L i3lock -i /home/jacob/locked.png
+# autostart
+picom -b
+xautolock -time 10 -locker "i3lock -i /home/jacob/locked.png" &
