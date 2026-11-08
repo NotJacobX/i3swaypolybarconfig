@@ -1,0 +1,1 @@
+sudo xbps-install -S qemu-common qemu-firmware qemu-system-amd64 qemu-img qemu-tools

@@ -66,12 +66,6 @@ bindsym $mod+d exec rofi -show drun
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
-
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -199,7 +193,7 @@ new_window pixel 2
 # autostart
 exec --no-startup-id pipewire
 exec --no-startup-id clipmenud
-exec --no-startup-id feh --bg-fill /usr/share/backgrounds/xfce/xfce-shapes.svg
+exec --no-startup-id feh --bg-fill /usr/share/backgrounds/xfce/xfce-mouserace.svg
 exec --no-startup-id polybar
 exec --no-startup-id picom -b
 exec --no-startup-id light -S 100
