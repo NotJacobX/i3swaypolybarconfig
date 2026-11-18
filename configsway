@@ -16,8 +16,9 @@ set $right l
 # Your preferred terminal emulator
 set $term lxterminal
 # Your preferred application launcher
-set $menu rofi --show drun
-
+set $menu rofi -show drun
+# Font
+font pango:AdwaitaMono Nerd Font 10
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -81,7 +82,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+r reload
 
     # Clipboard history
     bindsym $mod+Shift+v exec cliphist list | wofi --dmenu | cliphist decode | wl-copy    
@@ -232,11 +233,11 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
+    # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    status_command i3blocks
     colors {
         statusline #ffffff
-        background #323232
+        background #161616
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
@@ -256,3 +257,5 @@ exec wl-paste --type image --watch cliphist store
 exec pipewire
 exec light -S 100
 exec nm-applet --indicator
+exec swaybg -i /usr/share/backgrounds/xfce/xfce-mouserace.svg
+exec autotiling

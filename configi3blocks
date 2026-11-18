@@ -1,0 +1,23 @@
+markup=pango
+separator=false
+separator_block_width=14
+
+[cpu]
+command=echo "<span foreground='#fb4934'></span> $(top -bn1 | awk '/Cpu/ {printf "%.0f%%", 100 - $8}')"
+interval=2
+
+[memory]
+command=echo "<span foreground='#fabd2f'></span> $(free -m | awk '/Mem:/ {printf "%.1fM", $3}')"
+interval=3
+
+[battery]
+command=echo "<span foreground='#b8bb26'></span> $(cat /sys/class/power_supply/BAT1/capacity)%"
+interval=10
+
+[date]
+command=echo "<span foreground='#83a598'></span> $(date '+%a %d %b')"
+interval=60
+
+[time]
+command=echo "<span foreground='#d3869b'></span> $(date '+%H:%M:%S')"
+interval=1
